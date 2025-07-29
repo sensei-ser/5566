@@ -20,7 +20,7 @@ let total = sider.length;
 
 switch (command.toLowerCase()) {
 case 'молчуны':
-if (total === 0) return m.reply(`⚠️ Este grupo es activo, ¡no tiene fantasmas! :D`);
+if (total === 0) return m.reply(`⚠️ Эта группа активна, в ней нет молчунов! :D`);
 let teks = `⚠️ REVISIÓN DE INACTIVOS ⚠️\n\n`;
 teks += `Grupo: ${metadata.subject || 'Sin nombre'}\n`;
 teks += `*Miembros del grupo:* ${memberData.length}\n`;
@@ -32,7 +32,7 @@ await conn.sendMessage(m.chat, { text: teks, contextInfo: { mentionedJid: sider.
 break;
 
 case 'удалитьмолчунов':
-if (total === 0) return m.reply(`⚠️ Este grupo es activo, ¡no tiene fantasmas! :D`);
+if (total === 0) return m.reply(`⚠️ Эта группа активна, в ней нет молчунов! :D`);
 let kickTeks = `⚠️ ELIMINACIÓN DE INACTIVOS ⚠️\n\n`;
 kickTeks += `Grupo: ${metadata.subject || 'Sin nombre'}\n`;
 kickTeks += `*Miembros del grupo:* ${memberData.length}\n`;
