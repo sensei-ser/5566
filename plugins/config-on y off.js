@@ -51,7 +51,7 @@ await db.query(`INSERT INTO group_settings (group_id) VALUES ($1) ON CONFLICT DO
 await db.query(`UPDATE group_settings SET detect = $1 WHERE group_id = $2`, [isEnable, chatId])
 break
 
-case 'antilink': case 'antienlace':
+case 'антиссылка': case 'antienlace':
 if (!m.isGroup) throw '⚠️ Este comando solo se puede usar dentro de un grupo.'
 if (!isAdmin) throw "⚠️ Solo los admins puede usar este comando.";
 await db.query(`INSERT INTO group_settings (group_id) VALUES ($1) ON CONFLICT DO NOTHING`, [chatId])
