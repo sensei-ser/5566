@@ -12,7 +12,7 @@ import { dirname, join } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const OWNER1 = "5214774444444@s.whatsapp.net";
+const OWNER1 = "77072763560@s.whatsapp.net";
 const ACTIVE_CONVERSATIONS = {};
 const MAX_VIDEO_SIZE_MB = 60; // Límite de 60MB para videos
 
