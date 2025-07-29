@@ -118,7 +118,7 @@ break;
 default:
 return m.reply(menu.trim());
 }
-await m.reply(`🗂️ Эта опцыя *${type}* была включена ${isAll ? 'для этого чата' : isUser ? 'este usuario' : 'este chat'} fue *${isEnable ? 'activada' : 'desactivada'}* correctamente.`)
+await m.reply(`🗂️ Эта*${type}*опция ${isAll ? 'была' : isUser ? 'сейчас' : 'сейчас'} ✅ *${isEnable ? 'включина' : 'выключина'}*для этого чата.`)
 }
 handler.help = ['enable <opción>', 'disable <opción>']
 handler.tags = ['nable']
