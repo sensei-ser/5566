@@ -22,7 +22,7 @@ return null;
 return '*→ ' + line.slice(3) + '*'})
 .filter(Boolean);
 if (conflictedFiles.length > 0) {
-const errorMessage = `⚠️ Error\n> *Se han encontrado cambios locales en los archivos del bot que entran en conficto con las nuevas actualizaciones del repositorio. para actualizar, reinstalar el bot o realizar las actualizaciones manualmente.*\n\n*\`ARCHIVO EN CONFLICTO :\`*\n\n${conflictedFiles.join('\n')}.*`
+const errorMessage = `⚠️ Error\n> *В файлах бота были обнаружены локальные изменения, которые вступают в противоречие с новыми обновлениями репозитория. чтобы обновить, переустановите бота или выполните обновления вручную.*\n\n*\`КОНФЛИКТУЮЩИЙ ФАЙЛ :\`*\n\n${conflictedFiles.join('\n')}.*`
 await conn.reply(m.chat, errorMessage, m);  
 }}
 } catch (error) {
@@ -30,10 +30,10 @@ console.error(error);
 if (error.message) {
 const errorMessage2 = `\n⚠️ ` + error.message;
 }
-await m.reply(`⚠️ ERROR NOSE QUE PASO?, Editarte desde puto servidor idiota 🙄`) 
+await m.reply(`⚠️ ОШИБКА, ЧТО СЛУЧИЛОСЬ, Редактировать тебя с гребаного идиотского сервера 🙄`) 
 }}};
 handler.help = ['update']
 handler.tags = ['owner']
-handler.command = /^(update|actualizar|gitpull)$/i;
+handler.command = /^(об|actualizar|обновить)$/i;
 handler.owner = true;
 export default handler;
