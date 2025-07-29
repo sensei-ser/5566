@@ -705,7 +705,7 @@ if (plugin.register) {
 try {
 const result = await db.query('SELECT * FROM usuarios WHERE id = $1', [m.sender]);
 const user = result.rows[0];
-if (!user || user.registered !== true) return m.reply("「NO ESTAS REGISTRADO」\n\nPA NO APARECES EN MI BASE DE DATOS ✋🥸🤚\n\nPara poder usarme escribe el siguente comando\n\nComando: #reg nombre.edad\nEjemplo: #reg elrebelde.21");
+
 } catch (e) {
 console.error(e);
 }}
