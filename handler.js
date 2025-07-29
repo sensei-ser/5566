@@ -704,8 +704,6 @@ if (plugin.private && isGroup) return m.reply("⚠️ Este comando solo funciona
 if (plugin.register) {
 try {
 const result = await db.query('SELECT * FROM usuarios WHERE id = $1', [m.sender]);
-const user = result.rows[0];
-
 } catch (e) {
 console.error(e);
 }}
