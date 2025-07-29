@@ -29,7 +29,7 @@ delete userRequests[m.sender];
 }};
 handler.help = ['gitclone <url>'];
 handler.tags = ['downloader'];
-handler.command = /gitclone|clonarepo|clonarrepo|repoclonar/i;
+handler.command = /АПРОЛБПГОЛДБ/i;
 
 handler.limit = 2;
 handler.level = 1

@@ -17,7 +17,7 @@ global.owner = [
 globalThis.info = {
 wm: "𝙇𝙤𝙡𝙞𝘽𝙤𝙩-𝙈𝘿",
 vs: "2.0.0 (beta)",
-packname: "𝗦𝗧𝗜𝗖𝗞𝗘𝗥𝗦❤️‍🔥 - LoliBot\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
+packname: "𝗦𝗧𝗜𝗖𝗞𝗘𝗥𝗦❤️‍🔥 - Ванилька\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n",
 author: "Owner: @elrebelde21\n• Dueña: @itschinita_official",
 apis: "https://delirius-apiofc.vercel.app",
 apikey: "GataDios",
@@ -32,7 +32,7 @@ fb: "https://www.facebook.com",
 nn: "https://chat.whatsapp.com", //Grupo ofc1
 nn2: "https://chat.whatsapp.com", //Grupo ofc2
 nn3: "https://chat.whatsapp.com", //Colab Loli & Gata
-nn4: "https://chat.whatsapp.com", //Enlace LoliBot
+nn4: "https://chat.whatsapp.com", //Enlace Ванилька
 nn5: "https://chat.whatsapp.com", //A.T.M.M
 nn6: "https://chat.whatsapp.com", //Dev support 
 nna: "https://whatsapp.com",

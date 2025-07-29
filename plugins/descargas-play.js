@@ -33,7 +33,7 @@ contextInfo:{
 forwardedNewsletterMessageInfo: { 
 newsletterJid: '120363305025805187@newsletter', 
 serverMessageId: '', 
-newsletterName: 'LoliBot ✨️' },
+newsletterName: 'Ванилька ✨️' },
 forwardingScore: 9999999,  
 isForwarded: true,   
 mentionedJid: null,  
