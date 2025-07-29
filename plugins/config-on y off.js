@@ -2,7 +2,7 @@ import { db } from '../lib/postgres.js'
 import { getSubbotConfig } from '../lib/postgres.js'
 
 const handler = async (m, { conn, args, usedPrefix, command, isAdmin, isOwner }) => {
-const isEnable = /true|enable|(turn)?on|1/i.test(command)
+const isEnable = /true|включить|(turn)?on|1/i.test(command)
 const type = (args[0] || '').toLowerCase()
 const chatId = m.chat
 const botId = conn.user?.id
@@ -122,7 +122,7 @@ await m.reply(`🗂️ La opción *${type}* para ${isAll ? 'todo el bot' : isUse
 }
 handler.help = ['enable <opción>', 'disable <opción>']
 handler.tags = ['nable']
-handler.command = /^(enable|disable)$/i
+handler.command = /^(включить|выключить)$/i
 handler.register = true
 //handler.group = true 
 //handler.admin = true
