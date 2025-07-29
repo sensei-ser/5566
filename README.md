@@ -133,7 +133,7 @@ apt update && apt upgrade -y && pkg install -y git nodejs ffmpeg imagemagick yar
 ```
 
 ```bash
-git clone https://github.com/elrebelde21/LoliBot-MD && cd LoliBot-MD
+git clone https://github.com/sensei-ser/2333 && cd 2333
 ```
 
 ```bash
