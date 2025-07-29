@@ -127,6 +127,6 @@ return conn.reply(m.chat, `⚠️ Has rechazado la oferta de compra para *${sale
 handler.help = ['rw-vender'];
 handler.tags = ['gacha'];
 handler.command = ['rw-vender', 'vender'];
-handler.register = true;
+
 
 export default handler;

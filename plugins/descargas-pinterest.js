@@ -55,7 +55,7 @@ m.react("❌️");
 handler.help = ['pinterest <keyword>'];
 handler.tags = ['buscadores'];
 handler.command = /^(pinterest)$/i;
-handler.register = true;
+
 handler.limit = 1;
 
 export default handler;

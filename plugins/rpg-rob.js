@@ -30,7 +30,7 @@ return conn.reply(m.chat, `*Robaste ${cantidad} XP a @${who.split('@')[0]}*`, m,
 handler.help = ['rob', 'robar'];
 handler.tags = ['econ'];
 handler.command = /^(robar|rob)$/i;
-handler.register = true;
+
 
 export default handler;
 

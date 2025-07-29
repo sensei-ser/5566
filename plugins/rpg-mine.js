@@ -19,7 +19,7 @@ m.reply(`${minar} *${formatNumber(hasil)} XP*`);
 handler.help = ['minar'];
 handler.tags = ['econ'];
 handler.command = ['minar', 'miming', 'mine'];
-handler.register = true;
+
 
 export default handler;
 

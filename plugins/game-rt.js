@@ -29,7 +29,7 @@ return conn.reply(m.chat, `😱 La ruleta cayó en *${resultColor}*\n${isWin ? `
 handler.help = ['rt <color> <cantidad>'];
 handler.tags = ['game'];
 handler.command = ['rt'];
-handler.register = true;
+
 
 export default handler;
 

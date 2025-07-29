@@ -28,6 +28,6 @@ await conn.reply(m.chat, `*•───⧼⧼⧼ 𝙱𝙰𝙻𝙰𝙽𝙲𝙴 �
 handler.help = ['balance'];
 handler.tags = ['econ'];
 handler.command = ['bal', 'diamantes', 'diamond', 'balance'];
-handler.register = true;
+
 
 export default handler;

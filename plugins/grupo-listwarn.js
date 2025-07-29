@@ -26,6 +26,6 @@ console.error(err);
 handler.help = ['listwarn'];
 handler.tags = ['group'];
 handler.command = /^listwarn$/i;
-handler.register = true;
+
 
 export default handler;

@@ -206,6 +206,6 @@ return m.reply(tipo === "sugerencia" ? "✅ ¡Gracias! Tu sugerencia ha sido env
 handler.help = ["report <texto>", "sugge <sugerencia>"];
 handler.tags = ["main"];
 handler.command = /^(report|request|suggestion|sugge|reporte|bugs?|report-owner|reportes|reportar)$/i;
-handler.register = true;
+
 
 export default handler;

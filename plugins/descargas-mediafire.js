@@ -101,7 +101,7 @@ delete userRequests[m.sender];
 handler.help = ['mediafire', 'mediafiredl'];
 handler.tags = ['downloader'];
 handler.command = /^(mediafire|mediafiredl|dlmediafire)$/i;
-handler.register = true;
+
 handler.limit = 3;
 
 export default handler;

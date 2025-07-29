@@ -30,6 +30,6 @@ handler.command = /^(delwarn|unwarn)$/i;
 handler.group = true;
 handler.admin = true;
 handler.botAdmin = true;
-handler.register = true;
+
 
 export default handler;

@@ -18,7 +18,7 @@ await conn.reply(m.chat, `*${textoo}*\n\nGanaste: *${formatNumber(ganancias)} XP
 handler.help = ['slut'];
 handler.tags = ['rpg', 'hot'];
 handler.command = /^slut$/i;
-handler.register = true;
+
 
 export default handler;
 

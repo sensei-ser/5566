@@ -47,7 +47,7 @@ return conn.sendMessage(m.chat, { text, mentions: [m.sender, randomTarget] }, { 
 handler.help = ['crime'];
 handler.tags = ['econ'];
 handler.command = /^(crime|crimen)$/i;
-handler.register = true;
+
 handler.group = true;
 
 export default handler;

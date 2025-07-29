@@ -68,7 +68,7 @@ delete userRequests[m.sender];
 handler.help = ['spotify'];
 handler.tags = ['downloader'];
 handler.command = /^(spotify|music)$/i;
-handler.register = true;
+
 handler.limit = 1;
 
 export default handler;

@@ -50,7 +50,7 @@ delete userRequests[m.sender];
 handler.help = ['thread']
 handler.tags = ['downloader']
 handler.command = /^(thread|threads|threaddl)$/i;
-handler.register = true;
+
 handler.limit = 1
 
 export default handler

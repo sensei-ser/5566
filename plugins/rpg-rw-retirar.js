@@ -22,6 +22,6 @@ return conn.reply(m.chat, '⚠️ Error al retirar el personaje. Intenta de nuev
 handler.help = ['rw-retirar'];
 handler.tags = ['gacha'];
 handler.command = ['rw-retirar'];
-handler.register = true;
+
 
 export default handler;

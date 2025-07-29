@@ -107,6 +107,6 @@ m.reply(`❌ Incorrecto. Te quedan *${juego.intentos}* intento(s).`);
 handler.help = ['acertijo', 'pelicula', 'trivia'];
 handler.tags = ['game'];
 handler.command = /^(acertijo|acert|adivinanza|tekateki|pelicula|adv|trivia)$/i;
-handler.register = true;
+
 
 export default handler;

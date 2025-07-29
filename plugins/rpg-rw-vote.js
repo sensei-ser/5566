@@ -33,7 +33,7 @@ return conn.reply(m.chat, `✨️ Votaste por el personaje *${character.name}*, 
 handler.help = ['vote <nombre del personaje>'];
 handler.tags = ['gacha'];
 handler.command = ['vote'];
-handler.register = true;
+
 
 export default handler;
 
