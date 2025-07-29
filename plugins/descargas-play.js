@@ -41,7 +41,7 @@ externalAdReply: {
 showAdAttribution: false,  
 renderLargerThumbnail: false,  
 title: yt_play[0].title,   
-body: "LoliBot",
+body: "Ванилька",
 containsAutoReply: true,  
 mediaType: 1,   
 thumbnailUrl: yt_play[0].thumbnail, 
