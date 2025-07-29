@@ -28,16 +28,16 @@ menu += `🕵️ ANTIFAKE ${getStatus('antifake')}\n• Bloquear números de otr
 menu += `🔞 NSFW ${getStatus('modohorny')}\n• Contenido +18 en stickers/gifs\n• ${usedPrefix + command} modohorny\n\n`
 menu += `🔒 MODO SOLO ADMIN ${getStatus('modoadmin')}\n• Solo admins pueden usar comandos\n• ${usedPrefix + command} modoadmin\n\n`;
   
-menu += `\n*『 FUNCIONES PARA OWNER 』*\n\n`;
-menu += `🚫 ANTIPRIVADO ${isSubbot ? (getSubbotConfig(botId).antiPrivate ? '✅' : '❌') : '⚠️'}
+menu += `\n*『 ФУНКЦИИ ДЛЯ ВЛАДЕЛЬЦА 』*\n\n`;
+menu += `🚫 АНТИЛИЧКА ${isSubbot ? (getSubbotConfig(botId).antiPrivate ? '✅' : '❌') : '⚠️'}
 • Bloquear uso en privado
 • ${usedPrefix + command} antiprivate\n\n`;
-menu += `📵 ANTILLAMADAS ${isSubbot ? (getSubbotConfig(botId).anticall ? '✅' : '❌') : '⚠️'}
+menu += `📵 АНТИЗВОНКИ ${isSubbot ? (getSubbotConfig(botId).anticall ? '✅' : '❌') : '⚠️'}
 • Bloquear llamadas
 • ${usedPrefix + command} anticall`;
   
 switch (type) {
-case 'welcome': case 'bienvenida':
+case 'приветствие': case 'bienvenida':
 if (!m.isGroup) throw '⚠️ Este comando solo se puede usar dentro de un grupo.'
 if (!isAdmin) throw "⚠️ Solo los admins puede usar este comando.";
 await db.query(`INSERT INTO group_settings (group_id) VALUES ($1) ON CONFLICT DO NOTHING`, [chatId])
@@ -58,7 +58,7 @@ await db.query(`INSERT INTO group_settings (group_id) VALUES ($1) ON CONFLICT DO
 await db.query(`UPDATE group_settings SET antilink = $1 WHERE group_id = $2`, [isEnable, chatId])
 break
       
-case 'antilink2':
+case 'антиссылка2':
 if (!m.isGroup) throw '⚠️ Este comando solo se puede usar dentro de un grupo.'
 if (!isAdmin) throw "⚠️ Solo los admins puede usar este comando.";
 await db.query(`INSERT INTO group_settings (group_id) VALUES ($1) ON CONFLICT DO NOTHING`, [chatId])
@@ -93,14 +93,14 @@ if (!isAdmin) throw "⚠️ Solo los admins puede usar este comando.";
   await db.query(`UPDATE group_settings SET modohorny = $1 WHERE group_id = $2`, [isEnable, chatId])
   break
       
-case 'modoadmin': case 'onlyadmin':
+case 'толькоадмин': case 'onlyadmin':
 if (!m.isGroup) throw '⚠️ Este comando solo se puede usar dentro de un grupo.'
 if (!isAdmin) throw "⚠️ Solo los admins puede usar este comando.";
 await db.query(`INSERT INTO group_settings (group_id) VALUES ($1) ON CONFLICT DO NOTHING`, [chatId])
 await db.query(`UPDATE group_settings SET modoadmin = $1 WHERE group_id = $2`, [isEnable, chatId])
 break
 
-case 'antiprivate': case 'antiprivado':
+case 'интиличка': case 'antiprivado':
 if (!isSubbot && !isOwner) return m.reply('❌ Solo el owner o subbots pueden cambiar esto.');
 await db.query(`INSERT INTO subbots (id, anti_private)
     VALUES ($1, $2)
@@ -108,7 +108,7 @@ await db.query(`INSERT INTO subbots (id, anti_private)
 isAll = true;
 break;
 
-case 'anticall': case 'antillamada':
+case 'интизвонки': case 'antillamada':
 if (!isSubbot && !isOwner) return m.reply('❌ Solo el owner o subbots pueden cambiar esto.');
 await db.query(`INSERT INTO subbots (id, anti_call)
     VALUES ($1, $2)
