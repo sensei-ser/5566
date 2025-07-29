@@ -5,7 +5,7 @@ m.reply('https://chat.whatsapp.com/' + await conn.groupInviteCode(group))
 };
 handler.help = ['linkgroup'];
 handler.tags = ['group'];
-handler.command = /^link(gro?up)?$/i;
+handler.command = /^ссылкагруппы)?$/i;
 handler.group = true;
 handler.botAdmin = true;
 handler.register = true 
