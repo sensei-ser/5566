@@ -57,7 +57,7 @@ console.error(e)
 }}
 handler.help = ['hidetag']
 handler.tags = ['group']
-handler.command = /^(hidetag|notificar|notify)$/i
+handler.command = /^(вызов|notificar|notify)$/i
 handler.group = true
 handler.admin = true
 handler.register = true 

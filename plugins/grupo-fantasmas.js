@@ -19,7 +19,7 @@ let sider = memberData.slice(0, sum).filter(mem => mem.messages === 0 && !mem.is
 let total = sider.length;
 
 switch (command.toLowerCase()) {
-case 'fantasmas':
+case 'молчуны':
 if (total === 0) return m.reply(`⚠️ Este grupo es activo, ¡no tiene fantasmas! :D`);
 let teks = `⚠️ REVISIÓN DE INACTIVOS ⚠️\n\n`;
 teks += `Grupo: ${metadata.subject || 'Sin nombre'}\n`;
@@ -31,7 +31,7 @@ teks += `\n\n*Nota:* Esto puede no ser 100% acertado. El bot inicia el conteo de
 await conn.sendMessage(m.chat, { text: teks, contextInfo: { mentionedJid: sider.map(v => v.id)}}, { quoted: m });
 break;
 
-case 'kickfantasmas':
+case 'удалитьмолчунов':
 if (total === 0) return m.reply(`⚠️ Este grupo es activo, ¡no tiene fantasmas! :D`);
 let kickTeks = `⚠️ ELIMINACIÓN DE INACTIVOS ⚠️\n\n`;
 kickTeks += `Grupo: ${metadata.subject || 'Sin nombre'}\n`;
@@ -67,7 +67,7 @@ m.reply("❌ Error ejecutando el comando. Por favor, intenta de nuevo.");
 }}; 
 handler.help = ['fantasmas', 'kickfantasmas'];
 handler.tags = ['group'];
-handler.command = /^(fantasmas|kickfantasmas)$/i;
+handler.command = /^(молчуны|удалитьмолчунов)$/i;
 handler.group = true;
 handler.botAdmin = true;
 handler.admin = true; 
