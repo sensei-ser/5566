@@ -16,17 +16,17 @@ const getStatus = (flag) => m.isGroup ? (chat[flag] ? '✅' : '❌') : '⚠️';
 let menu = `*『 ⧼⧼⧼ ＣＯＮＦＩＧＵＲＡＣＩＯ́Ｎ ⧽⧽⧽ 』*\n\n`;
 menu += `> *Seleccione una opción de la lista*\n> *Para empezar a Configurar*\n\n`;
 menu += `● *Avisos de la Configuracion:*
-✅ ⇢ *Función Activada*
-❌ ⇢ *Función Desactivada*
-⚠️ ⇢ *Este Chat no es un Grupo*\n\n`;
-menu += `*『 FUNCIONES PARA ADMINS 』*\n\n`;
-menu += `🎉 BIENVENIDA ${getStatus('welcome')}\n• Mensaje de bienvenida\n• ${usedPrefix + command} welcome\n\n`;
-menu += `📣 DETECTAR AVISOS ${getStatus('detect')}\n• Avisar cambios en el grupo\n• ${usedPrefix + command} detect\n\n`;
-menu += `🔗 ANTILINK ${getStatus('antilink')}\n• Detectar enlaces de grupo\n• ${usedPrefix + command} antilink\n\n`;
-menu += `🌐 ANTILINK2 ${getStatus('antilink2')}\n• Detectar cualquier link\n• ${usedPrefix + command} antilink2\n\n`;
+✅ ⇢ *Функция Включена*
+❌ ⇢ *Функция Отключена*
+⚠️ ⇢ *Этот чат не является группой*\n\n`;
+menu += `*『 КОМАНДЫ ДЛЯ АДМИНА 』*\n\n`;
+menu += `🎉 ПРИВЕТСТВИЕ ${getStatus('welcome')}\n• Mensaje de bienvenida\n• ${usedPrefix + command} welcome\n\n`;
+menu += `📣 АКТИВНОСТЬ ${getStatus('detect')}\n• Уведомлять об изменениях в группе\n• ${usedPrefix + command} detect\n\n`;
+menu += `🔗 АНТИССЫЛКА ${getStatus('antilink')}\n• Detectar enlaces de grupo\n• ${usedPrefix + command} antilink\n\n`;
+menu += `🌐 АНТИССЫЛКА2 ${getStatus('antilink2')}\n• Detectar cualquier link\n• ${usedPrefix + command} antilink2\n\n`;
 menu += `🕵️ ANTIFAKE ${getStatus('antifake')}\n• Bloquear números de otros países\n• ${usedPrefix + command} antifake\n\n`;
 menu += `🔞 NSFW ${getStatus('modohorny')}\n• Contenido +18 en stickers/gifs\n• ${usedPrefix + command} modohorny\n\n`
-menu += `🔒 MODO SOLO ADMIN ${getStatus('modoadmin')}\n• Solo admins pueden usar comandos\n• ${usedPrefix + command} modoadmin\n\n`;
+menu += `🔒 ТОЛЬКО АДМИН ${getStatus('modoadmin')}\n• Solo admins pueden usar comandos\n• ${usedPrefix + command} modoadmin\n\n`;
   
 menu += `\n*『 ФУНКЦИИ ДЛЯ ВЛАДЕЛЬЦА 』*\n\n`;
 menu += `🚫 АНТИЛИЧКА ${isSubbot ? (getSubbotConfig(botId).antiPrivate ? '✅' : '❌') : '⚠️'}
@@ -44,7 +44,7 @@ await db.query(`INSERT INTO group_settings (group_id) VALUES ($1) ON CONFLICT DO
 await db.query(`UPDATE group_settings SET welcome = $1 WHERE group_id = $2`, [isEnable, chatId])
 break
 
-case 'detect': case 'avisos':
+case 'активность': case 'avisos':
 if (!m.isGroup) throw '⚠️ Este comando solo se puede usar dentro de un grupo.'
 if (!isAdmin) throw "⚠️ Solo los admins puede usar este comando.";
 await db.query(`INSERT INTO group_settings (group_id) VALUES ($1) ON CONFLICT DO NOTHING`, [chatId])
