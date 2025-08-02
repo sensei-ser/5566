@@ -186,7 +186,7 @@ break
 
 case "promote": case "daradmin": case "darpoder":
 if (settings.detect) {
-const raw = settings.sPromote || `@user 𝘼𝙃𝙊𝙍𝘼 𝙀𝙎 𝘼𝘿𝙈𝙄𝙉 𝙀𝙉 𝙀𝙎𝙏𝙀 𝙂𝙍𝙐𝙋𝙊\n\n😼🫵𝘼𝘾𝘾𝙄𝙊𝙉 𝙍𝙀𝘼𝙇𝙄𝙕𝘼𝘿𝘼 𝙋𝙊𝙍: @author`
+const raw = settings.sPromote || `@user ВЫ ТЕПЕРЬ АДМИН ГРУППЫ\n\n😼🫵НАЗНАЧИЛ ВАС АДМИНОМ: @author`
 const msg = raw
   .replace(/@user/gi, userTag)
   .replace(/@group/gi, groupName)
