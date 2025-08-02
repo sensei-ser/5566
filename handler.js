@@ -139,7 +139,7 @@ console.error("❌ Error en 'remove':", err);
           
 if (settings.welcome && conn?.user?.jid !== globalThis?.conn?.user?.jid) {
 const groupDesc = metadata.desc || "Sin descripción"
-const raw = settings.sbye || `Bueno, se fue @user 👋\n\nQue dios lo bendiga 😎`
+const raw = settings.sbye || `Ну, он ушел @user 👋\n\nДругого найдем 😎`
 const msg = raw
 .replace(/@user/gi, userTag)
 .replace(/@group/gi, groupName)
@@ -695,12 +695,12 @@ console.log(isAdmin)
 console.error(e);
 }}
 
-if (plugin.owner && !isOwner) return m.reply("⚠️ Tu que? no eres mi propietario para venir a dame orden 🙄, solo el dueño del sub-bot o el owner puede usar este comando.");
-if (plugin.rowner && !isROwner) return m.reply("⚠️ Tu que? no eres mi propietario para venir a dame orden 🙄.");
-if (plugin.admin && !isAdmin) return m.reply("🤨 No eres admins. Solo los admins pueden usar este comando.");
-if (plugin.botAdmin && !isBotAdmin) return m.reply(`⚠️ haz admin al Bot "YO" para poder usar este comando.`);
-if (plugin.group && !isGroup) return m.reply("⚠️ Estos es un grupo?, este comando solo funciona el grupo");
-if (plugin.private && isGroup) return m.reply("⚠️ Este comando solo funciona el pv");
+if (plugin.owner && !isOwner) return m.reply("⚠️ Ты что?Ты что? ты не мой хозяин, чтобы приходить и приказывать мне 🙄, эту команду может использовать только владелец суб-бота или владелец.");
+if (plugin.rowner && !isROwner) return m.reply("⚠️ Ты что?Ты что? ты не мой хозяин, чтобы приходить и приказывать мне 🙄.");
+if (plugin.admin && !isAdmin) return m.reply("🤨 Ты не администратор. Эту команду могут использовать только администраторы.");
+if (plugin.botAdmin && !isBotAdmin) return m.reply(`⚠️ сделайте бота "Я" администратором, чтобы иметь возможность использовать эту команду.`);
+if (plugin.group && !isGroup) return m.reply("⚠️ Это группа?, эта команда работает только с группой");
+if (plugin.private && isGroup) return m.reply("⚠️ Эта команда работает только на pv");
 if (plugin.register) {
 try {
 const result = await db.query('SELECT * FROM usuarios WHERE id = $1', [m.sender]);
