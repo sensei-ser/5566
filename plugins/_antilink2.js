@@ -26,10 +26,10 @@ const isSenderAdmin = metadata.participants.some(p => p.id === m.sender && p.adm
 
 if (isSenderAdmin || m.fromMe) return;
 if (!isBotAdmin) {
-return await conn.sendMessage(m.chat, { text: `*「 ANTILINK DETECTADO 」*\n\n${userTag}, enviaste un link pero no puedo eliminarte porque no soy admin.`, mentions: [m.sender] }, { quoted: m });
+return await conn.sendMessage(m.chat, { text: `*「 АНТИ ССЫЛКА 2 」*\n\n${userTag}, вы отправили ссылку, но я не могу удалить вас, потому что я не администратор.`, mentions: [m.sender] }, { quoted: m });
 }
 
-await conn.sendMessage(m.chat, { text: `*「 ANTILINK DETECTADO 」*\n\n${userTag}, rompiste las reglas del grupo y serás eliminado.`, mentions: [m.sender] }, { quoted: m });
+await conn.sendMessage(m.chat, { text: `*「 АНТИ ССЫЛКА 2 」*\n\n${userTag}, вы нарушили правила группы, и вас исключат.`, mentions: [m.sender] }, { quoted: m });
 try {
 await conn.sendMessage(m.chat, { delete: { remoteJid: m.chat, fromMe: false, id: bang, participant: delet }});
 await conn.groupParticipantsUpdate(m.chat, [m.sender], 'remove');

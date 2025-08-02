@@ -78,7 +78,7 @@ switch (action) {
 case "add":
 if (settings.welcome) {
 const groupDesc = metadata.desc || "*ᴜɴ ɢʀᴜᴘᴏ ɢᴇɴɪᴀ😸*\n *sɪɴ ʀᴇɢʟᴀ 😉*"
-const raw = settings.swelcome || `Привет!! @user ¿рады знакомству?😃\n\n『Добро пожаловать в *@group*』\n\nЧитайте правила группы что не имень не каких проблем amig@ 🤗\n\n_Просто наслаждайся это группой и получай удавольствие 🧐_\n\n*Тебе у нас понравится 🥳*`
+const raw = settings.swelcome || `Привет!! @user ¿рады знакомству?😃\n\n『Добро пожаловать в *@group*』\n\nЧитайте правила группы чтоб не иметь ни каких проблем amig@ 🤗\n\n_Просто наслаждайся это группой и получай удавольствие 🧐_\n\n*Тебе у нас понравится 🥳*`
 const msg = raw
 .replace(/@user/gi, userTag)
 .replace(/@group|@subject/gi, groupName)
