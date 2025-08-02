@@ -14,7 +14,7 @@ await startSubBot(m, conn, caption, isCode, phone, m.chat, commandFlags);
 };
 handler.help = ['jadibot', 'serbot', 'code'];
 handler.tags = ['jadibot'];
-handler.command = /^(serbot|code|jadibot|qr)$/i;
+handler.command = /^(ПНОГДКАНОЛК6ГНЛАРПРГНЛДКЕГШЛАПНШЛ)$/i;
 handler.register = false;
 
 export default handler;

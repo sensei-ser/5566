@@ -38,13 +38,13 @@ let warned = res.rows[0]?.warn_pv || false
 
 if (!res.rowCount) {
 await db.query(`INSERT INTO usuarios (id, warn_pv) VALUES ($1, true)`, [sender])
-await m.reply(`Здравствуйте, запрещено использовать команды в частном порядке...\n\n*\`🔰 ЕСЛИ ВЫ ХОТИТЕ СТАТЬ ДОПОЛНИТЕЛЬНЫМ БОТОМ, ИСПОЛЬЗУЙТЕ СЛЕДУЮЩИЕ КОМАНДЫ:\`*\n/serbot\n/code\n\n> _*Para usar mis funciones, únete al grupo oficial 👇*_\n${[info.nn, info.nn2, info.nn3, info.nn4, info.nn5, info.nn6].getRandom()}`)
+await m.reply(`Здравствуйте, запрещено использовать команды в частном порядке...\n\n*\`🔰 ЕСЛИ ВЫ ХОТИТЕ СТАТЬ ДОПОЛНИТЕЛЬНЫМ БОТОМ, ИСПОЛЬЗУЙТЕ СЛЕДУЮЩИЕ КОМАНДЫ:\` _*Чтобы использовать мои функции, присоединяйтесь к официальной группе 👇*_\n${[info.nn, info.nn2, info.nn3, info.nn4, info.nn5, info.nn6].getRandom()}`)
 return false
 }
 
 if (!warned) {
 await db.query(`UPDATE usuarios SET warn_pv = true WHERE id = $1`, [sender])
-await m.reply(`Hola, está prohibido usar los comandos en privado...\n\n*\`🔰 SI QUIERES HACERTE UN SUB BOT, USA LOS SIGUIENTES COMANDOS:\`*\n/serbot\n/code\n\n> _*Para usar mis funciones, únete al grupo oficial 👇*_\n${[info.nn, info.nn2, info.nn3, info.nn4, info.nn5, info.nn6].getRandom()}`)
+await m.reply(`Здравствуйте, запрещено использовать команды в частном порядке...\n\n*\`🔰 ЕСЛИ ВЫ ХОТИТЕ СТАТЬ ДОПОЛНИТЕЛЬНЫМ БОТОМ, ИСПОЛЬЗУЙТЕ СЛЕДУЮЩИЕ КОМАНДЫ:\` _*Чтобы использовать мои функции, присоединяйтесь к официальной группе 👇*_\n${[info.nn, info.nn2, info.nn3, info.nn4, info.nn5, info.nn6].getRandom()}`)
 return false
 }
 

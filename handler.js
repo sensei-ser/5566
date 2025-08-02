@@ -219,7 +219,7 @@ break
 
 case "demote": case "quitaradmin": case "quitarpoder":
 if (settings.detect) {
-const raw = settings.sDemote || `@user 𝘿𝙀𝙅𝘼 𝘿𝙀 𝙎𝙀𝙍 𝘼𝘿𝙈𝙄𝙉 𝙀𝙉 𝙀𝙎𝙏𝙀 𝙂𝙍𝙐𝙋𝙊\n\n😼🫵𝘼𝘾𝘾𝙄𝙊𝙉 𝙍𝙀𝘼𝙇𝙄𝙕𝘼𝘿𝘼 𝙋𝙊𝙍: @author`
+const raw = settings.sDemote || `@user С ВАС БЫЛА СНЯТА АДМИНКА ГРУППЫ\n\n😼🫵СНЯЛ АДМИНКУ : @author`
 const msg = raw
   .replace(/@user/gi, userTag)
   .replace(/@group/gi, groupName)
