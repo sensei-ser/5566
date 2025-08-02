@@ -212,7 +212,7 @@ const age = now - modifiedTime;
 if (age > 3 * 60 * 1000) {
 fs.unlinkSync(filePath);
 }
-console.log(chalk.gray(`┏━━━━━━⪻♻️ AUTO-CLEAR 🗑️⪼━━━━━━•\n┃→ ARCHIVOS DE LA CARPETA TMP ELIMINADOS\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━•`));
+console.log(chalk.gray(`┏━━━━━━⪻♻️ АВТОМАТИЧЕСКАЯ ОЧИСТКА 🗑️⪼━━━━━━•\n┃→ УДАЛЕННЫЕ ФАЙЛЫ ИЗ ПАПКИ TMP\n┗━━━━━━━━━━━━━━━━━━━━━━━━━━━•`));
 });
 } catch (err) {
 console.error('Error cleaning temporary files:', err);
@@ -224,7 +224,7 @@ console.error('Error cleaning temporary files:', err);
 setInterval(() => {
   const now = Date.now();
   const carpetas = ['./jadibot', './BotSession'];
-console.log(chalk.bold.cyanBright(`\n╭» 🟠 ARCHIVOS 🟠\n│→ ARCHIVOS RESIDUALES ELIMINADAS\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`));
+console.log(chalk.bold.cyanBright(`\n╭» 🟠 АРХИВЫ 🟠\n│→ УДАЛЕННЫЕ ОСТАТОЧНЫЕ ФАЙЛЫ\n╰― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― ― 🗑️♻️`));
 
   for (const basePath of carpetas) {
     if (!fs.existsSync(basePath)) continue;
@@ -248,13 +248,13 @@ console.log(chalk.bold.cyanBright(`\n╭» 🟠 ARCHIVOS 🟠\n│→ ARCHIVOS R
 
           if (file.startsWith('pre-key') && ageMs > 24 * 60 * 60 * 1000 && !isActive) {
             fs.unlinkSync(fullPath);
-            console.log(chalk.cyanBright(`[🔵] Pre-key vieja eliminada (${folder}): ${file}`));
+            console.log(chalk.cyanBright(`[🔵] Удален старый предварительный ключ (${folder}): ${file}`));
           } else if (ageMs > 30 * 60 * 1000 && !isActive) {
             fs.unlinkSync(fullPath);
-            console.log(chalk.gray(`[⚪] Archivo viejo eliminado (${folder}): ${file}`));
+            console.log(chalk.gray(`[⚪] Удален старый файл (${folder}): ${file}`));
           }
         } catch (err) {
-          console.error(chalk.red(`[⚠] Error al limpiar archivo ${file}:`), err);
+          console.error(chalk.red(`[⚠] Ошибка при очистке файла ${file}:`), err);
         }
       }
     }

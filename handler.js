@@ -78,7 +78,7 @@ switch (action) {
 case "add":
 if (settings.welcome) {
 const groupDesc = metadata.desc || "*ᴜɴ ɢʀᴜᴘᴏ ɢᴇɴɪᴀ😸*\n *sɪɴ ʀᴇɢʟᴀ 😉*"
-const raw = settings.swelcome || `HOLAA!! @user ¿COMO ESTAS?😃\n\n『Bienvenido A *@group*』\n\nUn gusto conocerte amig@ 🤗\n\n_Recuerda leer las reglas del grupo para no tener ningun problema 🧐_\n\n*Solo disfrutar de este grupo y divertite 🥳*`
+const raw = settings.swelcome || `Привет!! @user ¿рады знакомству?😃\n\n『Добро пожаловать в *@group*』\n\nЧитайте правила группы что не имень не каких проблем amig@ 🤗\n\n_Просто наслаждайся это группой и получай удавольствие 🧐_\n\n*Тебе у нас понравится 🥳*`
 const msg = raw
 .replace(/@user/gi, userTag)
 .replace(/@group|@subject/gi, groupName)
@@ -418,7 +418,7 @@ return (id === botJid || id === (conn.user?.lid || "").replace(/:\d+/, "")) && (
 });
 
 if (isBotAdmin) {
-await conn.sendMessage(chatId, { text: `⚠️ @${phoneNumber} En este grupo no está permitido el ingreso de números con prefijos prohibidos, será expulsado...`, mentions: [m.sender]});
+await conn.sendMessage(chatId, { text: `⚠️ @${phoneNumber} В эту группу не допускается ввод номеров с запрещенными префиксами, они будут исключены...`, mentions: [m.sender]});
 await conn.groupParticipantsUpdate(chatId, [m.sender], "remove");
 return;
 }}}
