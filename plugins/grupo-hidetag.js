@@ -2,7 +2,7 @@ import { generateWAMessageFromContent } from "@whiskeysockets/baileys"
 import * as fs from 'fs'
 
 var handler = async (m, { conn, text, participants, isOwner, usedPrefix, command, isAdmin }) => {
-if (!m.quoted && !text) return m.reply(`Введите текст\n\nИли ответ ъте на смс`) 
+if (!m.quoted && !text) return m.reply(`Введите текст\n\nИли ответьте на смс`) 
 let users = participants.map(u => conn.decodeJid(u.id))
 if (m.quoted && m.quoted.message) {
 const type = Object.keys(m.quoted.message)[0]
