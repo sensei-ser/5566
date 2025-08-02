@@ -218,11 +218,7 @@ console.log(chalk.gray(`┏━━━━━━⪻♻️ AUTO-CLEAR 🗑️⪼━�
 console.error('Error cleaning temporary files:', err);
 }}, 30 * 1000);
         
-setInterval(() => {
-console.log('♻️ Reiniciando bot automáticamente...');
-process.exit(0); 
-}, 10800000) //3hs
-//3600000
+
 
 //tmp session basura
 setInterval(() => {

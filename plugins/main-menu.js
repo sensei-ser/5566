@@ -168,7 +168,7 @@ console.error(err);
 }}
 handler.help = ['menu']
 handler.tags = ['main']
-handler.command = /^впрлььвепно$/i
+handler.command = /^впрлььвепнапрло$/i
 handler.noprefixOnly = true;
 export default handler
 
